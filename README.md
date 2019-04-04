@@ -1,6 +1,6 @@
 # metronome.io v2
 
-This is a bare bones static site using SASS and Bootstrap 4.3.  All SCSS/CSS and JS files are minified and concatenated and Images are optimized  placed in the `dist` folder ready to be referenced.  The working CSS and JS files can be found in the `assets` folder.  Any images placed within the `images` folder will be optimized and placed in the `dist/images` directory ready to be served.  
+This is a bare bones static site using SASS and Bootstrap 4.3.  All SCSS/CSS and JS files are minified and concatenated and Images are optimized and placed in the `dist` folder ready to be referenced.  The working CSS and JS files can be found in the `assets` folder.  Any images placed within the root `images` folder will be optimized and placed in the `dist/images` directory ready to be served.  
 
 ### Install dependencies:
 
