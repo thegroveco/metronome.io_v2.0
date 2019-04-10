@@ -20,26 +20,31 @@ $( document ).ready(function($) {
 	}
 	$windowWidth = viewport().width;
 
+	/* Handle resizing header on scroll */
+	$(window).resize(function(){
 
-	if ($windowWidth >= 992) {
+		if ($windowWidth >= 992) {
 
-		var navbar = $('.navbar');
-		var origOffsetY = navbar.offset().top;
+			var navbar = $('.navbar');
+			var origOffsetY = navbar.offset().top;
 
-		function scroll() {
+			function scroll() {
 
-			if ( $(window).scrollTop() >= origOffsetY ) {
-				$("header#masthead").addClass("scrolled fixed-top");
-				$('body').css('padding-top', '110px');
-			} else {
-			    $("header#masthead").removeClass("scrolled fixed-top");
-			    $('body').css('padding-top', '0');
+				if ( $(window).scrollTop() >= origOffsetY ) {
+					$("header#masthead").addClass("scrolled fixed-top");
+					$('body').css('padding-top', '110px');
+				} else {
+				    $("header#masthead").removeClass("scrolled fixed-top");
+				    $('body').css('padding-top', '0');
+				}
+
 			}
+			document.onscroll = scroll;
+		};
 
-		}
-		document.onscroll = scroll;
-	}
+	}).resize();
 
+	/* Initialize main nav toggle */
 	$('.toggler').on('click', function() {
 		$(this).toggleClass('is-active');
 	})

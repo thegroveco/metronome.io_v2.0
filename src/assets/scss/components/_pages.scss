@@ -1,0 +1,295 @@
+/*################################################################################### HOME */
+body.home {
+	background-position: right top;
+	background-size: auto;
+
+	.welcome {
+
+		height: 500px;
+
+		@media(max-width: 991px) {
+			height: auto;
+		}
+	}
+
+	.white-half {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 50%;
+		height: 900px;
+		background-color: #FFF;
+	}
+	.gray-fade {
+		position: absolute;
+		top: 1015px;
+		display: block;
+		width: 100%;
+		height: 800px;
+		background: #eaeaea; /* Old browsers */
+		background: -moz-linear-gradient(top, #eaeaea 0%, #ffffff 50%, #ffffff 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #eaeaea 0%,#ffffff 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #eaeaea 0%,#ffffff 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+		@media(max-width: 991px) {
+			top: 800px;
+		}
+	}
+	.slashes {
+		top: -100px;
+	}
+}
+
+
+.auction {
+	margin-top: 100px;
+}
+.carousel {
+
+	height: 490px;
+	background-image: url('../images/carousel-bg.jpg');
+	background-size: cover;
+
+	img,
+	p {
+		margin: 75px auto ;
+	}
+
+	p {
+		font-size: 23px;
+		color: $gray-light;
+
+		a {
+			font-size: 15px;
+		}
+
+		@media( max-width: 991px ) {
+
+		    font-size: 16px;
+		    color: #afafaf;
+		    padding: 0 46px;
+
+		}
+	}
+
+	i {
+		font-size: 26px;
+	}
+
+	@media( max-width: 991px ) {
+
+		.carousel-control-next,
+		.carousel-control-prev {
+			width: 10%;
+		}
+
+	}
+}
+.card {
+
+	border-radius: 0;
+
+	.card-image {
+		height: 240px;
+	}
+
+	h2 {
+		color: #6448D9;
+		font-weight: 700;
+		font-size: 60px;
+
+		@media(max-width: 991px) {
+			font-size: 42px;
+		}
+	}
+
+	p {
+		padding: 0 16px;
+		max-width: 260px;
+		height: 140px;
+	}
+}
+.nav-connect {
+	text-align: right;
+
+	li {
+		display: inline-block;
+		margin: 0 4px 4px 0;
+	}
+
+	a {
+		display: block;
+		width: 68px;
+		height: 68px;
+		padding-top: 16px;
+		font-size: 36px;
+		color: #A2A2A2;
+		text-align: center;
+
+		&:hover {
+			background-color: #7e61f8 !important;
+			color: #FFF;
+		}
+	}
+
+	@media(max-width:1199px) {
+		max-width: 220px;
+	}
+}
+.nav-milestones {
+
+	padding-left: 0;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 5px;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		border-left: 2px solid $purple;
+	}
+	.ms-date,
+	.ms-title {
+		display: inline-block;
+		height: 62px;
+		padding: 10px 20px;
+		color: #EAEAEA;
+		letter-spacing: .1em;
+		line-height: 1em;
+	}
+
+	.ms-date {
+		font-size: 14px;
+		font-weight: 700;
+		background-color: #6448D9;
+	}
+	.ms-title {
+		font-size: 17px;
+		background-color: $purple;
+	}
+
+	.ms-link {
+		font-size: 14px;
+		font-weight: 700;
+	}
+	.ms-break {
+		height: 25px;
+	}
+
+	i {
+		color: $purple;
+		font-size: 12px;
+	}
+
+	@media(max-width: 991px) {
+
+		display: block;
+
+		&.flex-column {
+			flex-direction: unset !important;
+		}
+
+		.nav-item {
+			display: block !important;
+		}
+
+		i,
+		&:before {
+			display: none !important;
+		}
+
+		.ms-date,
+		.ms-title {
+			width: 100%;
+		}
+
+		.ms-date {
+			height: 30px;
+			padding: 8px 20px;
+		}
+
+		.ms-title {
+			height: auto;
+			padding: 10px 20px 12px;
+		}
+
+		.ms-link {
+			display: block !important;
+			text-align: right;
+		}
+	}
+
+}
+
+/*################################################################################### BUY */
+.options {
+
+	.option {
+
+		margin-bottom: 120px;
+
+		h2 {
+			line-height: 1.6em;
+		}
+	}
+
+	@media(max-width: 767px) {
+
+		.option {
+
+			margin-bottom: 60px;
+
+			img {
+				max-width: 60%;
+			}
+		}
+	}
+}
+
+/*################################################################################### BUILD */
+.links {
+
+	.q-link {
+
+		a {
+			display: block;
+			position: relative;
+			height: 170px;
+			padding: 30px;
+			background-color: $purple;
+			font-size: 18px;
+			color: #FFF;
+			text-decoration: underline;
+
+			.page-turn {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 35px 0 0 35px;
+				border-color: transparent transparent transparent #6548d9;
+			}
+
+			&:hover {
+
+				background-color: $gray-dark;
+
+				.page-turn {
+					border-color: transparent transparent transparent #1C1C1C;
+				}
+			}
+
+		}
+	}
+
+	.slashes {
+		bottom: 150px;
+	}
+
+}
