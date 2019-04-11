@@ -454,3 +454,67 @@ body.home {
 
 	}
 }
+
+/*################################################################################### ABOUT */
+.about {
+
+	.principles {
+
+		h3 {
+
+			position: relative;
+			background-color: $purple;
+			height: 62px;
+
+			span {
+				position: relative;
+				z-index: 1;
+
+				&.angle {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 62px 0 0 62px;
+					border-color: transparent transparent transparent #6548d9;
+					z-index: 0;
+
+				}
+
+			}
+
+		}
+	}
+
+	.origin {
+
+		overflow: hidden;
+		padding-top: 95px;
+
+		> img {
+			position: absolute;
+			right: -145px;
+			top: 0;
+
+			@media(min-width: 992px) and (max-width: 1199px) {
+				max-width: 60%;
+			}
+			@media(min-width: 768px) and (max-width: 991px) {
+				max-width: 66%;
+			}
+			@media(max-width: 767px) {
+				    position: relative;
+				    right: auto;
+				    top: auto;
+				    padding: 40px;
+			}
+		}
+
+		@media(max-width: 767px) {
+			padding-top: 0;
+		}
+	}
+
+}

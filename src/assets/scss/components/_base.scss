@@ -250,10 +250,13 @@ header.site-header {
 				color: #B2B2B2;
 				text-align: right;
 
-				&:hover {
+				&:hover,
+				&.active,
+				&:active  {
 					color: $purple;
 					background-color: transparent;
 				}
+
 			}
 
 			@media(max-width: 991px) {
