@@ -259,6 +259,7 @@ body.home {
 			position: relative;
 			height: 170px;
 			padding: 30px;
+			overflow: hidden;
 			background-color: $purple;
 			font-size: 18px;
 			color: #FFF;
@@ -276,12 +277,31 @@ body.home {
 				border-color: transparent transparent transparent #6548d9;
 			}
 
+			.accent {
+				display: block;
+				position: absolute;
+			    bottom: 9px;
+			    left: -4px;
+			    padding: 0;
+			    margin: 0;
+			    text-decoration: none;
+			    font-size: 60px;
+			    font-weight: 700;
+			    color: #6448D9;
+			    opacity: .4;
+			}
+
 			&:hover {
 
 				background-color: $gray-dark;
 
 				.page-turn {
 					border-color: transparent transparent transparent #1C1C1C;
+				}
+
+				.accent {
+					color: #1C1C1C;
+					opacity: .4;
 				}
 			}
 
@@ -292,4 +312,145 @@ body.home {
 		bottom: 150px;
 	}
 
+}
+
+/*################################################################################### BUILD */
+.engage {
+
+	.nav-tabs {
+
+		border: none;
+
+		.nav-link {
+			border-radius: 0;
+			border: none;
+			background-color: #BFBFBF;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $white;
+
+
+			&:hover {
+				background-color: darken(#BFBFBF, 10%);
+			}
+
+			&.active {
+				background-color: $gray-dark;
+				color: #B2B2B2;
+			}
+
+		}
+
+	}
+
+	.tab-content {
+
+		.tab-pane {
+			padding: 60px;
+			background-color: $gray-dark;
+			height: 490px;
+
+			p {
+				max-width: 370px;
+			}
+
+			&.primary-tab {
+				background-image: url('../images/tab-primary-logo.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			&.secondary-tab {
+				background-image: url('../images/tab-secondary-logo.png');
+				background-position: right center;
+				background-repeat: no-repeat;
+			}
+			&.token-tab {
+				background-image: url('../images/tab-token-icon.png');
+				background-position: right center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.meet {
+
+		h3 {
+			font-size: 26px;
+		}
+
+		form {
+
+			.form-control {
+				border: 2px solid #D1D1D1;
+			}
+		}
+
+		a.connect {
+			position: absolute;
+		    right: 80px;
+		    top: 165px;
+		}
+
+	}
+
+
+	@media(max-width:991px) {
+
+		.nav-tabs {
+			display: block;
+
+			.nav-item {
+				margin-bottom: 0;
+				border-bottom: 1px solid #ddd;
+			}
+		}
+
+		.tab-content {
+
+			.tab-pane.primary-tab,
+			.tab-pane.secondary-tab,
+			.tab-pane.token-tab {
+				background-size: 50%;
+				background-position: right top;
+			}
+		}
+	}
+
+}
+
+/*################################################################################### WALLET */
+.wallet {
+	.intro {
+		@media(max-width: 768px) {
+
+			a {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.look {
+
+		img {
+			position: relative;
+			z-index: 1;
+		}
+	}
+	.download {
+
+		background-color: #1C1C1C;
+		padding-top: 390px;
+		margin-top: -390px;
+
+		@media(min-width: 768px) and (max-width: 991px) {
+			padding-top: 290px;
+			margin-top: -290px;
+		}
+		@media(max-width: 767px) {
+			padding-top: 40px;
+			margin-top: 0;
+		}
+
+	}
 }

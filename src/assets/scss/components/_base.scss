@@ -47,9 +47,8 @@ h1.page-title {
 
 	@media(max-width: 991px) {
 
-		h1.page-title {
-			padding-top: 40px;
-		}
+		padding-top: 40px;
+
 	}
 }
 h2,
@@ -107,6 +106,7 @@ h5,
 	border-radius: 0;
 	font-size: 14px;
 	font-weight: 700;
+	text-transform: uppercase;
 	padding: 10px 20px;
 }
 .btn-primary {
@@ -120,6 +120,19 @@ h5,
 .btn-primary:not(:disabled):not(.disabled):active {
 	background-color: darken($purple, 10%);
 	border-color: darken($purple, 10%);
+	color: $white;
+}
+.btn-default {
+	box-shadow: none !important;
+	background-color: $gray-dark;
+	border-color: $gray-dark;
+	color: $white;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:not(:disabled):not(.disabled):active {
+	background-color: darken($gray-dark, 10%);
+	border-color: darken($gray-dark, 10%);
 	color: $white;
 }
 /* Form */
@@ -139,6 +152,11 @@ h5,
 	overflow: hidden;
 	background-image: url('../images/slashes-repeater.png');
 	background-repeat: repeat-x;
+}
+
+/* Flex Additions */
+.flex-match-fill {
+	flex: 1 1 0;
 }
 /*################################################################################### HEADER */
 header.site-header {
@@ -325,6 +343,18 @@ footer.site-footer {
 
 		.col-sm-6 {
 			margin-bottom: 20px;
+		}
+
+		.copyright {
+
+			.text-right {
+				text-align: left !important;
+				padding-left: 0 !important;
+			}
+
+			.mb-5 {
+				margin-bottom: 10px !important;
+			}
 		}
 	}
 }
