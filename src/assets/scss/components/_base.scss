@@ -28,7 +28,7 @@ a {
 
 	&:hover,
 	&:focus {
-		color: darken($purple, 10%);
+		color: $purple-dark;
 	}
 }
 h1,
@@ -68,7 +68,7 @@ h5,
 }
 .site-section {
 	position: relative;
-	padding-bottom: 120px;
+	padding-bottom: 100px;
 
 	@media( max-width: 991px ) {
 		padding-bottom: 60px;
@@ -79,6 +79,41 @@ h5,
 	font-weight: 400;
 	color: $gray-dark;
 }
+.btn {
+	border-radius: 0;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 10px 20px;
+}
+.btn-primary {
+	box-shadow: none !important;
+	background-color: $purple;
+	border-color: $purple;
+	color: $white;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active {
+	background-color: $purple-dark;
+	border-color: $purple-dark;
+	color: $white;
+}
+.btn-default {
+	box-shadow: none !important;
+	background-color: $gray-dark;
+	border-color: $gray-dark;
+	color: $white;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:not(:disabled):not(.disabled):active {
+	background-color: darken($gray-dark, 10%);
+	border-color: darken($gray-dark, 10%);
+	color: $white;
+}
+
+
 /* Additional Colors */
 .bg-dark {
 	background-color: $gray-dark;
@@ -102,39 +137,7 @@ h5,
 .txt-light {
 	color: $white;
 }
-.btn {
-	border-radius: 0;
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: uppercase;
-	padding: 10px 20px;
-}
-.btn-primary {
-	box-shadow: none !important;
-	background-color: $purple;
-	border-color: $purple;
-	color: $white;
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:not(:disabled):not(.disabled):active {
-	background-color: darken($purple, 10%);
-	border-color: darken($purple, 10%);
-	color: $white;
-}
-.btn-default {
-	box-shadow: none !important;
-	background-color: $gray-dark;
-	border-color: $gray-dark;
-	color: $white;
-}
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:not(:disabled):not(.disabled):active {
-	background-color: darken($gray-dark, 10%);
-	border-color: darken($gray-dark, 10%);
-	color: $white;
-}
+
 /* Form */
 .form-control {
 
@@ -157,6 +160,12 @@ h5,
 /* Flex Additions */
 .flex-match-fill {
 	flex: 1 1 0;
+}
+
+/* Util */
+.offset {
+	padding-top: 75px;
+	margin-top: -75px;
 }
 /*################################################################################### HEADER */
 header.site-header {

@@ -314,7 +314,7 @@ body.home {
 
 }
 
-/*################################################################################### BUILD */
+/*################################################################################### ENGAGE */
 .engage {
 
 	.nav-tabs {
@@ -355,20 +355,21 @@ body.home {
 				max-width: 370px;
 			}
 
+			&.primary-tab,
+			&.secondary-tab,
+			&.icon-tab {
+				background-position: right center;
+				background-repeat: no-repeat;
+			}
+
 			&.primary-tab {
 				background-image: url('../images/tab-primary-logo.png');
-				background-size: cover;
-				background-repeat: no-repeat;
 			}
 			&.secondary-tab {
 				background-image: url('../images/tab-secondary-logo.png');
-				background-position: right center;
-				background-repeat: no-repeat;
 			}
 			&.token-tab {
 				background-image: url('../images/tab-token-icon.png');
-				background-position: right center;
-				background-repeat: no-repeat;
 			}
 		}
 	}
@@ -458,6 +459,12 @@ body.home {
 /*################################################################################### ABOUT */
 .about {
 
+	.intro {
+
+		padding-bottom: 90px;
+
+	}
+
 	.principles {
 
 		h3 {
@@ -514,6 +521,65 @@ body.home {
 
 		@media(max-width: 767px) {
 			padding-top: 0;
+		}
+	}
+
+	.subscribe {
+
+		padding: 100px 0 180px;
+		background-image: url('../images/slashes-repeater.png');
+		background-repeat: repeat-x;
+		background-position: center 130px;
+
+		.bg-dark {
+			padding: 45px;
+		}
+
+		.plus {
+			position: absolute;
+			left: -50px;
+			top: 4px;
+			display: block;
+			width: 39px;
+			height: 39px;
+			padding: 5px;
+			background-color: $purple;
+			border-radius: 50%;
+			text-align: center;
+		}
+
+		form {
+
+			text-align: right;
+
+			.email,
+			.btn {
+				width: 240px !important;
+				display: inline-block;
+				border-width: 2px;
+				height: 48px;
+				vertical-align: top;
+			}
+
+			.email {
+
+				color: $white;
+				background-color: transparent;
+				border-color: #454545;
+			}
+		}
+	}
+
+	.team {
+
+		h4 {
+			font-size: 18px;
+		}
+	}
+
+	.info {
+		p {
+			max-width: 470px;
 		}
 	}
 
