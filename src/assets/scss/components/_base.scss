@@ -75,7 +75,7 @@ h5,
 	}
 }
 .lead {
-	font-soze: 23px;
+	font-size: 20px;
 	font-weight: 400;
 	color: $gray-dark;
 }
@@ -201,6 +201,14 @@ header.site-header {
 	    right: 0;
 	    left: 0;
 	    z-index: 1030;
+
+	    .navbar {
+
+		    .container {
+			    width: 100%;
+			    max-width: 100%;
+		    }
+	    }
 	}
 
 }
@@ -208,6 +216,10 @@ header.site-header {
 
 	top: 0px;
 	padding: .5rem 0;
+
+	.navbar-brand img {
+		max-width: 213px;
+	}
 
 	.navbar-nav {
 		margin-left: auto;
@@ -285,6 +297,12 @@ header.site-header {
 			}
 		}
 
+	}
+
+	.toggler {
+		position: absolute;
+		right: 0;
+		top: 5px;
 	}
 
 

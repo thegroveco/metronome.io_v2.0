@@ -36,8 +36,24 @@ body.home {
 			top: 800px;
 		}
 	}
+
 	.slashes {
 		top: -100px;
+	}
+
+	@media(max-width: 767px) {
+		.about {
+			img {
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+		}
+		.connect {
+
+			.lead {
+				margin-bottom: 15px !important;
+			}
+		}
 	}
 }
 
@@ -110,31 +126,45 @@ body.home {
 		height: 140px;
 	}
 }
-.nav-connect {
-	text-align: right;
+.connect {
 
-	li {
-		display: inline-block;
-		margin: 0 4px 4px 0;
+	.lead {
+		max-width: 350px;
 	}
 
-	a {
-		display: block;
-		width: 68px;
-		height: 68px;
-		padding-top: 16px;
-		font-size: 36px;
-		color: #A2A2A2;
-		text-align: center;
+	.nav-connect {
+		text-align: right;
 
-		&:hover {
-			background-color: #7e61f8 !important;
-			color: #FFF;
+		li {
+			display: inline-block;
+			margin: 0 4px 4px 0;
+		}
+
+		a {
+			display: block;
+			width: 68px;
+			height: 68px;
+			padding-top: 16px;
+			font-size: 36px;
+			color: #A2A2A2;
+			text-align: center;
+
+			&:hover {
+				background-color: #7e61f8 !important;
+				color: #FFF;
+			}
+		}
+
+		@media(max-width:1199px) {
+			max-width: 220px;
 		}
 	}
 
-	@media(max-width:1199px) {
-		max-width: 220px;
+	@media(max-width: 767px) {
+
+		.lead {
+			max-width: none;
+		}
 	}
 }
 .nav-milestones {
@@ -214,6 +244,7 @@ body.home {
 		.ms-title {
 			height: auto;
 			padding: 10px 20px 12px;
+			line-height: 1.2em;
 		}
 
 		.ms-link {
@@ -238,6 +269,11 @@ body.home {
 
 	@media(max-width: 767px) {
 
+
+		.lead {
+			margin-bottom: 0 !important;
+		}
+
 		.option {
 
 			margin-bottom: 60px;
@@ -246,6 +282,7 @@ body.home {
 				max-width: 60%;
 			}
 		}
+
 	}
 }
 
@@ -414,6 +451,7 @@ body.home {
 			.tab-pane.token-tab {
 				background-size: 50%;
 				background-position: right top;
+				background-repeat: no-repeat;
 			}
 		}
 	}
@@ -428,6 +466,8 @@ body.home {
 			a {
 				display: block;
 				margin-bottom: 10px;
+				max-width: 85%;
+				text-align: left;
 			}
 		}
 	}
@@ -526,19 +566,21 @@ body.home {
 
 	.subscribe {
 
+		position: relative;
 		padding: 100px 0 180px;
 		background-image: url('../images/slashes-repeater.png');
 		background-repeat: repeat-x;
 		background-position: center 130px;
 
 		.bg-dark {
+			position: relative;
 			padding: 45px;
 		}
 
 		.plus {
 			position: absolute;
-			left: -50px;
-			top: 4px;
+			left: -18px;
+			top: 47px;
 			display: block;
 			width: 39px;
 			height: 39px;
@@ -567,6 +609,35 @@ body.home {
 				background-color: transparent;
 				border-color: #454545;
 			}
+		}
+
+		@media(max-width: 767px) {
+
+			padding: 60px 0;
+
+			.bg-dark {
+
+				h3 {
+
+					margin-bottom: 15px;
+
+				}
+			}
+
+			.plus {
+				top: -18px;
+				left: calc(50% - 18px);
+
+			}
+
+			form {
+				text-align: center;
+
+				input {
+					margin: 2px 0 !important;
+				}
+			}
+
 		}
 	}
 
