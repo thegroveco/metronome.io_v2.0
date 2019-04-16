@@ -76,7 +76,7 @@ h5,
 }
 .lead {
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 500;
 	color: $gray-dark;
 }
 .btn {
@@ -231,6 +231,7 @@ header.site-header {
 				font-size: 14px;
 				color: #333335;
 				padding: 5px 15px;
+				font-weight: 500;
 			}
 
 			&.active .nav-link,
@@ -265,6 +266,7 @@ header.site-header {
 			background-color: $gray-dark;
 			border: none;
 			border-radius: 0;
+			min-width: 14rem;
 
 			.dropdown-item {
 				font-size: 14px;
@@ -295,6 +297,33 @@ header.site-header {
 					}
 				}
 			}
+
+			.sub-menu {
+				list-style: none;
+			    padding: 0 1.5rem 0 0;
+			    font-size: 14px;
+			    text-align: right;
+
+			    li {
+
+				    line-height: 1.5em;
+
+				    a {
+					    padding: 2px 0;
+
+					    &:hover {
+						    text-decoration: none;
+					    }
+				    }
+
+			    }
+
+			    @media(max-width: 991px) {
+				    text-align: center;
+				    padding: 0;
+			    }
+
+			}
 		}
 
 	}
@@ -324,6 +353,7 @@ header.site-header {
 
 /*################################################################################### FOOTER */
 footer.site-footer {
+	padding: 75px 0 50px;
 
 	background: #eaeaea; /* Old browsers */
 	background: -moz-linear-gradient(top, #eaeaea 0%, #ffffff 50%, #ffffff 100%); /* FF3.6-15 */
@@ -335,7 +365,8 @@ footer.site-footer {
 		color: $gray-mute;
 		border-bottom: 2px solid #D1D1D1;
 		padding-bottom: 10px;
-		margin-bottom: 20px
+		margin-bottom: 20px;
+		font-weight: 500;
 	}
 
 	.nav {
