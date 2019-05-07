@@ -307,6 +307,11 @@ body.home {
 			color: #FFF;
 			text-decoration: underline;
 
+			> div {
+				position: relative;
+				z-index: 2;
+			}
+
 			.page-turn {
 				display: block;
 				position: absolute;
@@ -331,6 +336,7 @@ body.home {
 			    font-weight: 700;
 			    color: #6448D9;
 			    opacity: .4;
+			    z-index: 1;
 			}
 
 			&.q-first {
