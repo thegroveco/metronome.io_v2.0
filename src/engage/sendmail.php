@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit'])){
-	$to = "brad@thegrove.co";
+	$to = "dariusz@metronome.io";
 	$_POST['email']?$from = filter_var($_POST['email'],FILTER_VALIDATE_EMAIL):$from = null;
 	$from?$email = $from:$email = null;
 	$_POST['name']?$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING):$name = null;
